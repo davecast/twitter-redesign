@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../webfonts/icomoon.eot");
+  src: url("../webfonts/icomoon.eot") format("embedded-opentype"),
+    url("../webfonts/icomoon.ttf") format("truetype"),
+    url("../webfonts/icomoon.woff") format("woff"),
+    url("../webfonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="tw-"],
+[class*=" tw-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tw-perfil:before {
+  content: "\e901";
+}
+.tw-perfil-a:before {
+  content: "\e902";
+}
+.tw-twitt:before {
+  content: "\e900";
+}
+.tw-home:before {
+  content: "\e910";
+}
+.tw-home-a:before {
+  content: "\e912";
+}
+.tw-messages:before {
+  content: "\e914";
+}
+.tw-messages-a:before {
+  content: "\e916";
+}
+.tw-notification:before {
+  content: "\e917";
+}
+.tw-notification-a:before {
+  content: "\e918";
+}
+.tw-search:before {
+  content: "\e919";
+}
+.tw-search-a:before {
+  content: "\e903";
+}
+
+:root {
+  --white: #ffffff;
+  --blue: #1da1f2;
+  --blue-light: #1da1f21a;
+  --black: #2c2c2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  background-color: #ededed;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a,
+a:focus,
+a:active {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+.navigation {
+  width: 100%;
+}
+.navigation__menu {
+  background-color: var(--white);
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.navigation__list {
+  margin-right: 9px;
+}
+.navigation__list:last-child {
+  margin-right: 0;
+}
+
+.navigation__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  line-height: 8px;
+  padding: 10px;
+  color: var(--black);
+  width: 55px;
+  height: 55px;
+  box-sizing: border-box;
+  border-radius: 7.5px;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.navigation__link:hover,
+.navigation__link--active {
+  color: var(--blue);
+  background-color: var(--blue-light);
+}
+
+.navigation__link span {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transform: translateY(-5px);
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+.navigation__link i {
+  font-size: 25px;
+  transform: translateY(3px);
+  transition: all 0.1s ease-in-out;
+}
+
+.navigation__link--active span {
+  opacity: 1;
+  height: auto;
+  transform: translateY(1px);
+}
+
+.navigation__link--active i {
+  transform: translateY(-1px);
+}
